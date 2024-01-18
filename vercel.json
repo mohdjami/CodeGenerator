@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "name": "Code generator",
+  "builds": [{ "src": "app.ts", "use": "@vercel/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "/app.ts" }]
+}
