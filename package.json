@@ -5,10 +5,10 @@
   "main": "server.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.ts",
-    "build": "npm i",
+    "start": "node dist/server",
+    "build": "tsc-p .",
     "postinstall": "prisma generate",
-    "dev": "ts-node server.ts",
+    "dev": "tsc-watch --onSuccess \"node dist/server.js\"",
     "debug": "ndb server.ts"
   },
   "keywords": [],
@@ -26,6 +26,7 @@
     "@prisma/client": "^5.8.1",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "nodemon": "^3.0.3"
+    "nodemon": "^3.0.3",
+    "tsc-watch": "^6.0.4"
   }
 }

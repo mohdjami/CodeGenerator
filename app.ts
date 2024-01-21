@@ -1,7 +1,6 @@
 import express, { Request, Response } from "express";
 import { db } from "./db";
 import cors from "cors";
-import exp from "constants";
 
 const app = express();
 app.use(express.json());
